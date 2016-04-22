@@ -1,1 +1,0 @@
-Meteor.subscribe('posts');	// 客户端需要订阅发布
