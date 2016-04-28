@@ -8,5 +8,5 @@ Meteor.publish('comments', function(postId) {
 });
 
 Meteor.publish('notifications', function() {
-  return Notifications.find();
+  return Notifications.find({userId: this.userId, read: false}); // 仅仅同步与当前用户有关的通知
 });
